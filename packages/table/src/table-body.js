@@ -34,25 +34,14 @@ export default {
   render(h) {
     const data = this.data || [];
     return (
-      <table
-        class="el-table__body"
-        cellspacing="0"
-        cellpadding="0"
-        border="0">
-        <colgroup>
-          {
-            this.columns.map(column => <col name={column.id} key={column.id} />)
-          }
-        </colgroup>
-        <tbody>
-          {
-            data.reduce((acc, row) => {
-              return acc.concat(this.wrappedRowRender(row, acc.length));
-            }, [])
-          }
-          <el-tooltip effect={this.table.tooltipEffect} placement="top" ref="tooltip" content={this.tooltipContent}></el-tooltip>
-        </tbody>
-      </table>
+      <tbody>
+        {
+          data.reduce((acc, row) => {
+            return acc.concat(this.wrappedRowRender(row, acc.length));
+          }, [])
+        }
+        <el-tooltip effect={this.table.tooltipEffect} placement="top" ref="tooltip" content={this.tooltipContent}></el-tooltip>
+      </tbody>
     );
   },
 

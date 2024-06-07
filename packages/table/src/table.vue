@@ -14,37 +14,39 @@
     }, tableSize ? `el-table--${ tableSize }` : '']"
     @mouseleave="handleMouseLeave($event)">
     <div class="hidden-columns" ref="hiddenColumns"><slot></slot></div>
-    <div
-      v-if="showHeader"
+    <!-- <div
+      
       v-mousewheel="handleHeaderFooterMousewheel"
       class="el-table__header-wrapper"
       ref="headerWrapper">
-      <table-header
-        ref="tableHeader"
-        :store="store"
-        :border="border"
-        :default-sort="defaultSort"
-        :style="{
-          width: layout.bodyWidth ? layout.bodyWidth + 'px' : ''
-        }">
-      </table-header>
-    </div>
+      
+    </div> -->
     <div
       class="el-table__body-wrapper"
       ref="bodyWrapper"
       :class="[layout.scrollX ? `is-scrolling-${scrollPosition}` : 'is-scrolling-none']"
       :style="[bodyHeight]">
-      <table-body
-        :context="context"
-        :store="store"
-        :stripe="stripe"
-        :row-class-name="rowClassName"
-        :row-style="rowStyle"
-        :highlight="highlightCurrentRow"
-        :style="{
-           width: bodyWidth
+      <table cellspacing="0" cellpadding="0" border="0" :style="{
+          width: layout.bodyWidth ? layout.bodyWidth + 'px' : ''
         }">
-      </table-body>
+        <table-header
+          v-if="showHeader"
+          ref="tableHeader"
+          :store="store"
+          :border="border"
+          :default-sort="defaultSort"
+        >
+        </table-header>
+        <table-body
+          :context="context"
+          :store="store"
+          :stripe="stripe"
+          :row-class-name="rowClassName"
+          :row-style="rowStyle"
+          :highlight="highlightCurrentRow"
+        >
+        </table-body>
+      </table>
       <div
         v-if="!data || data.length === 0"
         class="el-table__empty-block"
