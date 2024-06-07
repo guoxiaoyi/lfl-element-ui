@@ -1,4 +1,4 @@
-export * from './element-ui'
+export * from './lfl-element-ui'
 
-import * as ElementUI from './element-ui'
+import * as ElementUI from './lfl-element-ui'
 export default ElementUI

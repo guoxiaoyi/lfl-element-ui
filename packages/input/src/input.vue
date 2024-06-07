@@ -108,11 +108,11 @@
   </div>
 </template>
 <script>
-  import emitter from 'element-ui/src/mixins/emitter';
-  import Migrating from 'element-ui/src/mixins/migrating';
+  import emitter from 'lfl-element-ui/src/mixins/emitter';
+  import Migrating from 'lfl-element-ui/src/mixins/migrating';
   import calcTextareaHeight from './calcTextareaHeight';
-  import merge from 'element-ui/src/utils/merge';
-  import {isKorean} from 'element-ui/src/utils/shared';
+  import merge from 'lfl-element-ui/src/utils/merge';
+  import {isKorean} from 'lfl-element-ui/src/utils/shared';
 
   export default {
     name: 'ElInput',

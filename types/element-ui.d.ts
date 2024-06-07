@@ -96,11 +96,11 @@ export interface InstallationOptions {
   size: string
 }
 
-/** The version of element-ui */
+/** The version of lfl-element-ui */
 export const version: string
 
 /**
- * Install all element-ui components into Vue.
+ * Install all lfl-element-ui components into Vue.
  * Please do not invoke this method directly.
  * Call `Vue.use(ElementUI)` to install.
  */

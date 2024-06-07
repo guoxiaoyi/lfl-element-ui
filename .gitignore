@@ -8,15 +8,14 @@ npm-debug.log.*
 yarn-debug.log.*
 yarn-error.log.*
 lerna-debug.log.*
-lib
 .idea
 .vscode
-examples/element-ui
+examples/lfl-element-ui
 examples/pages/en-US
 examples/pages/zh-CN
 examples/pages/es
 examples/pages/fr-FR
-fe.element/element-ui
+fe.element/lfl-element-ui
 .npmrc
 coverage
 waiter.config.js
